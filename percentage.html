@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Percentage Calculator - ToolNest</title>
+
+<link rel="stylesheet" href="style.css">
+
+</head>
+
+
+<body>
+
+
+<header>
+
+<div class="logo">
+Tool<span>Nest</span>
+</div>
+
+<a href="index.html">
+<button id="themeBtn">
+Home
+</button>
+</a>
+
+</header>
+
+
+
+<section class="hero">
+
+<h1>
+Percentage Calculator
+</h1>
+
+<p>
+Calculate percentage quickly and easily.
+</p>
+
+
+<div class="calculator">
+
+
+<input id="number" type="number" placeholder="Enter number">
+
+
+<input id="percentage" type="number" placeholder="Enter percentage">
+
+
+<button onclick="calculatePercentage()">
+Calculate
+</button>
+
+
+<h2 id="result">
+Result will appear here
+</h2>
+
+
+</div>
+
+
+</section>
+
+
+
+<script>
+
+function calculatePercentage(){
+
+let number = document.getElementById("number").value;
+
+let percentage = document.getElementById("percentage").value;
+
+
+let result = (number * percentage) / 100;
+
+
+document.getElementById("result").innerHTML =
+"Result: " + result;
+
+
+}
+
+
+</script>
+
+
+</body>
+
+</html>

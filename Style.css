@@ -1,0 +1,297 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, sans-serif;
+}
+
+
+body{
+    background:#f5f7fb;
+    color:#222;
+    transition:0.3s;
+}
+
+
+/* Header */
+
+header{
+
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:20px 8%;
+    background:white;
+    box-shadow:0 2px 10px #0001;
+
+}
+
+
+.logo{
+
+    font-size:30px;
+    font-weight:800;
+
+}
+
+
+.logo span{
+
+    color:#2563eb;
+
+}
+
+
+
+#themeBtn{
+
+    border:none;
+    background:#2563eb;
+    color:white;
+    padding:10px 16px;
+    border-radius:12px;
+    cursor:pointer;
+
+}
+
+
+
+/* Hero */
+
+
+.hero{
+
+    text-align:center;
+    padding:70px 20px;
+
+}
+
+
+.hero h1{
+
+    font-size:42px;
+    margin-bottom:15px;
+
+}
+
+
+
+.hero p{
+
+    color:#666;
+    font-size:18px;
+
+}
+
+
+
+/* Search */
+
+
+.searchBox{
+
+    display:flex;
+    max-width:600px;
+    margin:35px auto;
+
+}
+
+
+
+.searchBox input{
+
+    flex:1;
+    padding:18px;
+    border:1px solid #ddd;
+    border-radius:15px 0 0 15px;
+    font-size:16px;
+
+}
+
+
+
+.searchBox button{
+
+    width:70px;
+    border:none;
+    background:#2563eb;
+    color:white;
+    font-size:20px;
+    border-radius:0 15px 15px 0;
+
+}
+
+
+
+/* Sections */
+
+
+section{
+
+    padding:40px 8%;
+
+}
+
+
+
+h2{
+
+    text-align:center;
+    margin-bottom:30px;
+
+}
+
+
+
+/* Categories */
+
+
+.categoryBox{
+
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:20px;
+
+}
+
+
+
+.categoryBox div{
+
+    background:white;
+    padding:25px;
+    border-radius:18px;
+    text-align:center;
+    font-weight:bold;
+    box-shadow:0 5px 15px #0001;
+
+}
+
+
+
+/* Tools */
+
+
+.toolGrid{
+
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:20px;
+
+}
+
+
+
+.card{
+
+    background:white;
+    padding:25px;
+    border-radius:20px;
+    box-shadow:0 5px 20px #0001;
+
+}
+
+
+
+.card p{
+
+    margin:15px 0;
+    color:#666;
+
+}
+
+
+
+.card button{
+
+    border:none;
+    background:#2563eb;
+    color:white;
+    padding:10px 18px;
+    border-radius:10px;
+
+}
+
+
+
+/* Footer */
+
+
+footer{
+
+    background:white;
+    text-align:center;
+    padding:25px;
+
+}
+
+
+
+/* Dark mode */
+
+
+.dark{
+
+    background:#111827;
+    color:white;
+
+}
+
+
+
+.dark header,
+.dark .card,
+.dark .categoryBox div,
+.dark footer{
+
+    background:#1f2937;
+
+}
+
+
+
+.dark p{
+
+    color:#ddd;
+
+}
+
+
+
+/* Mobile */
+
+
+@media(max-width:800px){
+
+
+.categoryBox,
+.toolGrid{
+
+grid-template-columns:1fr 1fr;
+
+}
+
+
+.hero h1{
+
+font-size:30px;
+
+}
+
+
+}
+
+
+
+@media(max-width:450px){
+
+
+.categoryBox,
+.toolGrid{
+
+grid-template-columns:1fr;
+
+}
+
+
+}

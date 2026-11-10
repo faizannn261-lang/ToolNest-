@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Age Calculator - ToolNest</title>
+
+<link rel="stylesheet" href="style.css">
+
+</head>
+
+
+<body>
+
+<header>
+
+<div class="logo">
+Tool<span>Nest</span>
+</div>
+
+<a href="index.html">
+<button>
+Home
+</button>
+</a>
+
+</header>
+
+
+<section class="hero">
+
+<h1>
+Age Calculator
+</h1>
+
+<p>
+Calculate your exact age easily.
+</p>
+
+
+<div class="calculator">
+
+<input type="date" id="birthDate">
+
+
+<button onclick="calculateAge()">
+Calculate Age
+</button>
+
+
+<h2 id="result">
+Your age will appear here
+</h2>
+
+
+</div>
+
+</section>
+
+
+
+<script>
+
+function calculateAge(){
+
+let birthDate = new Date(document.getElementById("birthDate").value);
+
+let today = new Date();
+
+
+let age = today.getFullYear() - birthDate.getFullYear();
+
+
+let month = today.getMonth() - birthDate.getMonth();
+
+
+if(month < 0 || (month === 0 && today.getDate() < birthDate.getDate())){
+
+age--;
+
+}
+
+
+document.getElementById("result").innerHTML =
+"Your age is: " + age + " years";
+
+}
+
+</script>
+
+
+</body>
+
+</html>

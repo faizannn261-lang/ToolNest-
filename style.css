@@ -1,0 +1,1082 @@
+const themeBtn = document.getElementById("themeBtn");
+
+themeBtn.onclick = function(){
+
+    document.body.classList.toggle("dark");
+
+    if(document.body.classList.contains("dark")){
+
+        themeBtn.innerHTML = "☀️";
+
+    } else {
+
+        themeBtn.innerHTML = "🌙";
+
+    }
+
+};
+
+.dark{
+    background:#111827;
+    color:white;
+}
+
+
+.dark header,
+.dark .card,
+.dark .categoryBox div,
+.dark footer{
+    background:#1f2937;
+}
+
+
+.dark p{
+    color:#ddd;
+}
+.card{
+
+    transition:0.3s;
+
+}
+
+
+.card:hover{
+
+    transform:translateY(-8px);
+
+}
+
+
+.card button{
+
+    cursor:pointer;
+
+}
+
+.icon{
+
+font-size:35px;
+margin-bottom:15px;
+
+}
+
+
+.card h3{
+
+font-size:22px;
+margin-bottom:10px;
+
+}
+
+
+.card button{
+
+width:100%;
+font-size:15px;
+font-weight:bold;
+
+}
+
+/* Page Animation */
+
+.hero,
+.categories,
+.tools,
+footer{
+    animation: fadeIn 0.8s ease;
+}
+
+
+.card{
+    animation: slideUp 0.6s ease;
+}
+
+
+@keyframes fadeIn{
+
+from{
+    opacity:0;
+}
+
+to{
+    opacity:1;
+}
+
+}
+
+
+
+@keyframes slideUp{
+
+from{
+    opacity:0;
+    transform:translateY(30px);
+}
+
+to{
+    opacity:1;
+    transform:translateY(0);
+}
+
+}
+
+/* 3D Background Animation */
+
+.scene{
+
+position:absolute;
+top:0;
+left:0;
+width:100%;
+height:100%;
+overflow:hidden;
+z-index:-2;
+perspective:1000px;
+
+}
+
+
+.cube{
+
+position:absolute;
+border-radius:30px;
+backdrop-filter:blur(10px);
+transform-style:preserve-3d;
+animation:float3d 8s infinite ease-in-out;
+
+}
+
+
+
+.cube1{
+
+width:180px;
+height:180px;
+top:100px;
+left:5%;
+background:#2563eb55;
+transform:rotateX(40deg) rotateY(40deg);
+
+}
+
+
+
+.cube2{
+
+width:220px;
+height:220px;
+right:5%;
+top:300px;
+background:#9333ea55;
+animation-delay:2s;
+transform:rotateX(60deg) rotateY(20deg);
+
+}
+
+
+
+.cube3{
+
+width:120px;
+height:120px;
+bottom:80px;
+left:45%;
+background:#06b6d455;
+animation-delay:4s;
+
+}
+
+
+
+@keyframes float3d{
+
+
+0%{
+
+transform:translateY(0) rotateX(0deg) rotateY(0deg);
+
+}
+
+
+50%{
+
+transform:translateY(-50px) rotateX(180deg) rotateY(180deg);
+
+}
+
+
+100%{
+
+transform:translateY(0) rotateX(360deg) rotateY(360deg);
+
+}
+
+
+}
+
+header,
+section,
+footer{
+    position:relative;
+    z-index:2;
+}
+
+/* Premium Hero Design */
+
+.hero h1{
+
+font-size:48px;
+font-weight:800;
+
+background:linear-gradient(90deg,#2563eb,#9333ea);
+
+-webkit-background-clip:text;
+-webkit-text-fill-color:transparent;
+
+}
+
+
+.hero p{
+
+max-width:600px;
+margin:auto;
+line-height:1.6;
+
+}
+
+
+
+/* Premium Search */
+
+.searchBox{
+
+background:white;
+padding:8px;
+border-radius:20px;
+box-shadow:0 10px 30px #0002;
+
+}
+
+
+
+.searchBox input{
+
+border:none;
+outline:none;
+
+}
+
+
+
+
+/* Better Cards */
+
+
+.card{
+
+border:1px solid #eee;
+overflow:hidden;
+
+}
+
+
+.card:hover{
+
+box-shadow:0 15px 35px #0002;
+
+}
+
+
+
+/* Better Buttons */
+
+
+.card button{
+
+background:linear-gradient(90deg,#2563eb,#4f46e5);
+
+transition:0.3s;
+
+}
+
+
+.card button:hover{
+
+transform:scale(1.05);
+
+}
+
+
+
+/* Logo Style */
+
+.logo{
+
+letter-spacing:-1px;
+
+}
+
+/* Ultra Premium Hero */
+
+.hero{
+
+position:relative;
+overflow:hidden;
+
+}
+
+
+.hero h1 span{
+
+background:linear-gradient(
+45deg,
+#2563eb,
+#9333ea,
+#06b6d4
+);
+
+background-size:200%;
+
+-webkit-background-clip:text;
+-webkit-text-fill-color:transparent;
+
+animation:gradientMove 4s infinite;
+
+}
+
+
+@keyframes gradientMove{
+
+0%{
+background-position:0%;
+}
+
+50%{
+background-position:100%;
+}
+
+100%{
+background-position:0%;
+}
+
+}
+
+
+
+/* Glass Cards */
+
+.card{
+
+background:rgba(255,255,255,0.65);
+
+backdrop-filter:blur(15px);
+
+border-radius:25px;
+
+box-shadow:
+0 20px 40px rgba(0,0,0,0.08);
+
+}
+
+
+
+.card:hover{
+
+transform:
+translateY(-15px)
+scale(1.03);
+
+box-shadow:
+0 30px 60px rgba(0,0,0,0.15);
+
+}
+
+
+
+/* Logo Premium */
+
+.logo{
+
+font-size:32px;
+
+font-weight:900;
+
+}
+
+
+.logo span{
+
+background:linear-gradient(45deg,#2563eb,#9333ea);
+
+-webkit-background-clip:text;
+
+-webkit-text-fill-color:transparent;
+
+}
+
+/* ToolNest Futuristic Theme */
+
+
+body{
+
+background:
+radial-gradient(circle at top left,#1e3a8a55,transparent 35%),
+radial-gradient(circle at bottom right,#9333ea55,transparent 35%),
+#050816;
+
+color:white;
+
+}
+
+
+/* Glass Cards */
+
+.card{
+
+background:
+linear-gradient(
+145deg,
+rgba(255,255,255,0.12),
+rgba(255,255,255,0.03)
+);
+
+border:1px solid rgba(255,255,255,0.15);
+
+backdrop-filter:blur(20px);
+
+color:white;
+
+}
+
+
+/* Neon Hover */
+
+.card:hover{
+
+border-color:#38bdf8;
+
+box-shadow:
+
+0 0 25px #38bdf855,
+0 20px 50px #0008;
+
+}
+
+
+/* Search Glass */
+
+.searchBox{
+
+background:rgba(255,255,255,0.1);
+
+border:1px solid rgba(255,255,255,0.2);
+
+backdrop-filter:blur(8px);
+
+}
+
+
+.searchBox input{
+
+background:transparent;
+
+color:white;
+
+}
+
+
+/* Buttons */
+
+.card button{
+
+background:
+
+linear-gradient(
+90deg,
+#06b6d4,
+#8b5cf6
+);
+
+border-radius:50px;
+
+box-shadow:
+
+0 0 20px #06b6d466;
+
+}
+
+
+/* Floating Glow */
+
+.hero::before{
+
+content:"";
+
+position:absolute;
+
+width:300px;
+height:300px;
+
+background:#06b6d4;
+
+filter:blur(120px);
+
+top:0;
+left:50%;
+
+opacity:.25;
+
+}
+
+/* Percentage Tool 3D Icon */
+
+
+.tool-image{
+
+width:90px;
+height:90px;
+
+margin:0 auto 20px;
+
+display:flex;
+
+align-items:center;
+justify-content:center;
+
+font-size:45px;
+
+font-weight:900;
+
+border-radius:25px;
+
+
+background:
+
+linear-gradient(
+135deg,
+#06b6d4,
+#8b5cf6
+);
+
+
+color:white;
+
+
+box-shadow:
+
+0 15px 35px #06b6d455;
+
+
+transform:rotate(-8deg);
+
+
+transition:.4s;
+
+}
+
+
+
+.percentage-icon:hover{
+
+transform:
+
+rotate(0deg)
+scale(1.15);
+
+
+box-shadow:
+
+0 20px 50px #8b5cf688;
+
+}
+
+/* Premium 3D Percentage Orb */
+
+
+.percentage-orb{
+
+width:120px;
+height:120px;
+
+margin:0 auto 20px;
+
+border-radius:50%;
+
+display:flex;
+align-items:center;
+justify-content:center;
+
+
+background:
+
+radial-gradient(
+circle at 30% 20%,
+#ffffff88,
+transparent 20%
+),
+
+linear-gradient(
+135deg,
+#06b6d4,
+#8b5cf6
+);
+
+
+box-shadow:
+
+inset -15px -15px 30px #0005,
+inset 10px 10px 20px #ffffff55,
+0 20px 50px #06b6d466;
+
+
+animation:orbFloat 4s infinite ease-in-out;
+
+
+position:relative;
+
+overflow:hidden;
+
+}
+
+
+
+.percentage-orb::after{
+
+content:"";
+
+position:absolute;
+
+width:40px;
+height:150px;
+
+background:#ffffff55;
+
+transform:rotate(35deg);
+
+left:-60px;
+
+animation:shine 3s infinite;
+
+}
+
+
+
+.percent-symbol{
+
+font-size:60px;
+
+font-weight:900;
+
+color:white;
+
+text-shadow:
+
+0 5px 15px #0005;
+
+}
+
+
+
+@keyframes orbFloat{
+
+
+0%,100%{
+
+transform:translateY(0) rotate(0deg);
+
+}
+
+
+50%{
+
+transform:translateY(-12px) rotate(8deg);
+
+}
+
+
+}
+
+
+
+@keyframes shine{
+
+
+0%{
+
+left:-80px;
+
+}
+
+
+100%{
+
+left:160px;
+
+}
+
+
+}
+
+/* ===== ToolNest V1 Premium Upgrade ===== */
+
+body{
+    position:relative;
+    overflow-x:hidden;
+}
+
+/* Moving Aurora Background */
+
+body::before{
+    content:"";
+    position:fixed;
+    inset:-25%;
+    z-index:-2;
+
+    background:
+    radial-gradient(circle,#3b82f655 0%,transparent 40%),
+    radial-gradient(circle,#8b5cf655 0%,transparent 35%),
+    radial-gradient(circle,#06b6d455 0%,transparent 35%);
+
+    background-size:40% 40%;
+
+    animation:auroraMove 30s linear infinite;
+}
+
+@keyframes auroraMove{
+
+0%{
+background-position:
+0% 0%,
+100% 30%,
+50% 100%;
+}
+
+100%{
+background-position:
+100% 100%,
+0% 70%,
+50% 0%;
+}
+
+}
+
+
+
+/* Glass Hero */
+
+.hero{
+
+position:relative;
+
+border-radius:35px;
+
+padding:70px 25px;
+
+background:
+
+rgba(255,255,255,.08);
+
+backdrop-filter:blur(20px);
+
+border:
+
+1px solid rgba(255,255,255,.15);
+
+overflow:hidden;
+
+}
+
+
+
+/* Shine */
+
+.hero::after{
+
+content:"";
+
+position:absolute;
+
+top:-120%;
+
+left:-40%;
+
+width:45%;
+
+height:300%;
+
+background:
+
+linear-gradient(
+
+90deg,
+
+transparent,
+
+rgba(255,255,255,.45),
+
+transparent
+
+);
+
+transform:rotate(25deg);
+
+animation:shineMove 6s infinite;
+
+}
+
+
+
+@keyframes shineMove{
+
+0%{
+
+left:-60%;
+
+}
+
+100%{
+
+left:160%;
+
+}
+
+}
+
+/* Floating Tool Balls */
+
+.floating-tools{
+
+position:absolute;
+
+inset:0;
+
+pointer-events:none;
+
+}
+
+
+.tool-ball{
+
+position:absolute;
+
+width:65px;
+
+height:65px;
+
+border-radius:50%;
+
+display:flex;
+
+align-items:center;
+
+justify-content:center;
+
+font-size:28px;
+
+background:rgba(255,255,255,.12);
+
+backdrop-filter:blur(18px);
+
+border:1px solid rgba(255,255,255,.2);
+
+box-shadow:
+
+0 10px 35px rgba(0,0,0,.25);
+
+animation:floatBall 10s ease-in-out infinite;
+
+}
+
+
+.ball1{
+
+top:25px;
+
+left:20px;
+
+}
+
+
+.ball2{
+
+top:60px;
+
+right:40px;
+
+animation-delay:1s;
+
+}
+
+
+.ball3{
+
+bottom:30px;
+
+left:8%;
+
+animation-delay:2s;
+
+}
+
+
+.ball4{
+
+bottom:50px;
+
+right:12%;
+
+animation-delay:3s;
+
+}
+
+
+.ball5{
+
+top:45%;
+
+right:2%;
+
+animation-delay:4s;
+
+}
+
+
+
+@keyframes floatBall{
+
+0%,100%{
+
+transform:translateY(0);
+
+}
+
+50%{
+
+transform:translateY(-18px);
+
+}
+
+}
+
+/* V2 Cursor Glow */
+
+.cursor-glow{
+
+position:fixed;
+
+width:250px;
+height:250px;
+
+border-radius:50%;
+
+background:
+
+radial-gradient(
+circle,
+rgba(59,130,246,.25),
+transparent 70%
+);
+
+pointer-events:none;
+
+z-index:-1;
+
+transform:translate(-50%,-50%);
+
+}
+
+
+
+/* Card Shine */
+
+.card{
+
+position:relative;
+
+overflow:hidden;
+
+}
+
+
+.card::before{
+
+content:"";
+
+position:absolute;
+
+top:0;
+
+left:-120%;
+
+width:80%;
+
+height:100%;
+
+background:
+
+linear-gradient(
+90deg,
+transparent,
+rgba(255,255,255,.25),
+transparent
+);
+
+transform:skewX(-25deg);
+
+transition:.5s;
+
+}
+
+
+.card:hover::before{
+
+left:140%;
+
+}
+
+/* V2 Step 3 - 3D Tool Cards */
+
+.card{
+
+transition:transform .4s ease, box-shadow .4s ease;
+
+transform-style:preserve-3d;
+
+}
+
+
+.card:hover{
+
+transform:
+
+translateY(-15px)
+rotateX(8deg)
+rotateY(-5deg);
+
+
+box-shadow:
+
+0 25px 60px rgba(0,0,0,.35);
+
+}
+
+
+.card h3{
+
+transition:.3s;
+
+}
+
+
+.card:hover h3{
+
+transform:translateZ(20px);
+
+}
+
+
+.card button{
+
+position:relative;
+
+overflow:hidden
